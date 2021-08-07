@@ -35,7 +35,7 @@ namespace game_catalog
                 s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Exemplo de Web API com Swagger",
+                    Title = "ASP.NET Core Web API com Swagger",
                     Description = "Isto é pra mostrar que é possível documentar uma ASP.NET Core Web API com Swagger.",
                     Contact = new Microsoft.OpenApi.Models.OpenApiContact
                     {
