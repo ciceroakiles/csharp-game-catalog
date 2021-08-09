@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using game_catalog.Models;
+using game_catalog.Repositories;
+using game_catalog.Services;
 
 namespace game_catalog
 {
@@ -24,11 +26,14 @@ namespace game_catalog
         // (Use este método para adicionar serviços ao container)
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IGameService, GameService>();
+            services.AddScoped<IGameRepository, GameRepository>();
+
             // Entity Framework
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
             
             services.AddControllers();
-
+            
             // Configuração do Swagger
             services.AddSwaggerGen(s =>
             {

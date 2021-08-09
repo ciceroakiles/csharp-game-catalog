@@ -1,4 +1,5 @@
 using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace game_catalog.Models
 {
