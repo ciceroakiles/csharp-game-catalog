@@ -10,6 +10,7 @@ namespace game_catalog.Repositories
     {
         private DataContext dataContext;
 
+        // Injeção de dependência
         public GameRepository(DataContext dataContext) {
             this.dataContext = dataContext;
         }

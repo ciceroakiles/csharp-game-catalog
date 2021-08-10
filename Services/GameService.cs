@@ -10,6 +10,7 @@ namespace game_catalog.Services
     {
         private readonly IGameRepository gameRepository;
 
+        // Injeção de dependência
         public GameService(IGameRepository gameRepository) {
             this.gameRepository = gameRepository;
         }

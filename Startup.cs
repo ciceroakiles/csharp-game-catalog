@@ -26,11 +26,12 @@ namespace game_catalog
         // (Use este método para adicionar serviços ao container)
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IGameService, GameService>();
-            services.AddScoped<IGameRepository, GameRepository>();
-
             // Entity Framework
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
+            
+            // Injeção de dependências
+            services.AddScoped<IGameRepository, GameRepository>();
+            services.AddScoped<IGameService, GameService>();
             
             services.AddControllers();
             
